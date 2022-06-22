@@ -1,0 +1,6 @@
+FROM tomcat:8-jre8
+MAINTAINER madhu
+RUN rm -rf /usr/local/tomcat/webapps/*
+COPY vprofie-v1.war /usr/local/tomcat/webapps/ROOT.war
+EXPOSE 8080
+CMD ["catalina.sh","run"]
